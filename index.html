@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Clickbait Challenge</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+   
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Clickbait Challenge</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="task"><a href="#task">Task</a></li>
+            <li><a href="#data">Data</a></li>
+            <li><a href="#data">Submission</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
+            <li><a href="#contact">Organizers</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="page-header">
+           <h1>Clickbait Challenge <small>2017</small></h1>
+        </div>
+      </div>
+
+      <div id="task" class="row">
+        <div class="col-sm-12">
+          <h2>Task</h2>
+          <p>
+            Develop a classifier for the detection of clickbait messages in social media.
+          </p>
+        </div>
+
+        <div class="col-sm-12">
+        <h3>How to participate</h3>
+        <ul>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register</a> for the challenge to get a TIRA virtual machine.</li>
+          <li>Develop and train a clickbait classifier on the training data.</li> 
+          <li>Deploy the trained classifier on a TIRA virtual machine.</li>
+          <li>Use TIRA to evaluate the trained classifier on the test set.</li>
+          <li>Submit a notebook paper and present your approach at the workshop.</li>
+        </ul>
+        </div>
+
+        <div class="col-sm-12">
+        <h3>Important Dates</h3>
+        <table class="table table-condensed"><tbody>
+            <tr>
+              <td>March 1, 2017</td><td>Registration opens.</td>
+            </tr><tr>
+              <td>May 1, 2017</td><td>Training data release.</td>
+            </tr><tr>
+              <td>August 1, 2017</td><td>Final software submission.</td>
+            </tr><tr>
+              <td>August 15, 2017</td><td>Announcement of evaluation results.</td>
+            </tr><tr>
+              <td>September 1, 2017</td><td>Paper submission.</td>
+            </tr><tr>
+              <td>December 6-10, 2017</td><td>Workshop.</td>
+            </tr>
+        </tbody></table>
+        </div>
+
+
+        <div class="col-sm-12">
+         <h3>Related Work</h3>
+          <ul>
+            <li class="inproceedings"><div id="stein_2016b"></div>Martin Potthast, Sebastian Köpsel, Benno Stein, and Matthias Hagen. <a href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2016b.pdf" class="paper"><span class="title">Clickbait Detection</span></a>. In Nicola Ferro et al, editors, <span class="booktitle">Advances in Information Retrieval. 38th European Conference on IR Research (ECIR 16)</span> volume <span class="volume">9626</span> of <span class="series">Lecture Notes in Computer Science</span>, pages <span class="pages">810-817</span>, <span class="address">Berlin Heidelberg New York</span>, <span class="month">March</span> <span class="year">2016</span>. <span class="publisher">Springer</span>.  [<a class="paper" href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2016b.pdf">paper</a>] [<a class="bib" href="http://www.uni-weimar.de/medien/webis/publications/bibentries.php?bibkey=stein_2016b">bib</a>]</li>
+          </ul>
+        </div>
+      </div><!--/.row -->
+
+      <hr>
+
+      <div id="data" class="row">
+        <h2>Datasets</h2>
+        <ul>
+          <li><a href="https://www.uni-weimar.de/en/media/chairs/webis/corpora/corpus-webis-cbc-16/">Training Dataset 1</a></li>
+          <li>Training Dataset 2 (to appear)</li>
+        </ul>
+      </div>
+
+      <hr>
+
+     <div class="row">
+        <h2>Submission</h2>
+        <p>We ask you to prepare your software so that it can be executed via a command line call.</p>
+
+        <p>
+        </p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">file </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre><p></p>
+
+        <p>The name of the output file (to be written to the
+        <i>path/to/output/directory</i> folder) must be the same as the name
+        of the input file. There can be more than one <b>-i</b> argument. In that case your
+        software should process each of the runs and produce an output one
+        file for each.</p>
+
+        <p>For example, if your software is called like this:
+
+        </p><p></p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">dataset</span><span class="pun">/</span><span class="pln">profession</span><span class="pun">.</span><span class="pln">test </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">dataset</span><span class="pun">/</span><span class="pln">nationality</span><span class="pun">.</span><span class="pln">test </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">output</span></pre><p></p>
+
+        <p>It should write files <i>profession.test</i> and
+        <i>nationality.test</i> to the folder <i>/output</i>, and the
+        two files should be identical to the two input files, except that they
+        contain an additional column with the scores (from the integer range 0..7).</p>
+
+        <p>You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. We will ask you to deploy your software onto a virtual machine that will be made accessible to you after registration. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
+        <p><a class="btn btn-default" href="virtual-machine-user-guide.pdf">Virtual Machine User Guide »</a></p>
+        <p>Once deployed in your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
+        <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the WSDM Cup 2017. We agree not to share your software with a third party or use it for other purposes than the WSDM Cup 2017.</p>
+          
+      </div>
+
+      <hr>
+
+      <div id="evaluation" class="row">
+        <h2>Evaluation Measure</h2>
+        <p>
+          Accuracy.
+        </p>
+      </div>
+
+
+
+    <hr>
+
+      <div id="contact" class="row">
+        <h2>Organizers</h2>
+        <ul>
+          <li>Martin Potthast.</li>
+          <li>Matthias Hagen.</li>
+          <li>Tim Gollub.</li>
+          <li>Benno Stein.</li>
+        </ul>
+      </div>
+
+
+
+
+
+       
+     <!--   <p class="lead">The goal of the Clickbait challenge is to foster research on the automated detection of clickbait in social media streams.</p>
+        <p>Clickbait refers to web content advertisement that is designed to entice its readers into clicking an accompanying link. Typically, it is spread on social media in the form of short teaser messages that may read like the following examples.</p>
+        <blockquote>A Man Falls Down And Cries For Help Twice. The Second Time, My Jaw Drops</blockquote>
+        <blockquote>9 Out Of 10 Americans Are Completely Wrong About This Mind-Blowing Fact</blockquote>
+        <blockquote>Here’s What Actually Reduces Gun Violence</blockquote>
+        <p> When reading such and similar messages, many get the distinct impression that something is odd about them; something unnamed is referred to, some emotional reaction is promised, some lack of knowledge is ascribed, some authority is claimed. Content publishers of all kinds discovered clickbait as an effective tool to draw attention to their websites. The level of attention captured by a website determines the prize of displaying ads there, whereas attention is measured in terms of unique page impressions, usually caused by clicking on a link that points to a given page (often abbreviated as “clicks”). Therefore, a clickbait’s target link alongside its teaser message usually redirects to the sender’s website if the reader is afar, or else to another page on the same site. The content found at the linked page often encourages the reader to share it, suggesting clickbait for a default message and thus spreading it virally. Clickbait on social media has been on the rise in recent years, and even some news publishers have adopted this technique. These developments have caused general concern among many outspoken bloggers, since clickbait threatens to clog up social media channels, and since it violates journalistic codes of ethics.</p>-->
+        
+
+    </div><!-- /.container -->
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

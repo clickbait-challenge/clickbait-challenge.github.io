@@ -56,7 +56,13 @@
         <div class="col-sm-12">
           <h2>Task</h2>
           <p>
-            Develop a classifier for the detection of clickbait messages in social media.
+            Develop a classifier for the detection of clickbait in social media streams. <a href="#">More on clickbait.</a>
+          </p>
+          <p>
+            For each social media post in the datasets, the original post on the social media platform as well as the linked target web page are provided. Example.
+          </p>
+          <p>
+            Classifiers have to make a binary decision upon clickbait.
           </p>
         </div>
 
@@ -77,13 +83,13 @@
             <tr>
               <td>March 1, 2017</td><td>Registration opens.</td>
             </tr><tr>
-              <td>May 1, 2017</td><td>Training data release.</td>
+              <td>May 1, 2017</td><td>Release of Training Dataset 2.</td>
             </tr><tr>
               <td>August 1, 2017</td><td>Final software submission.</td>
             </tr><tr>
               <td>August 15, 2017</td><td>Announcement of evaluation results.</td>
             </tr><tr>
-              <td>September 1, 2017</td><td>Paper submission.</td>
+              <td>September 15, 2017</td><td>Paper submission deadline.</td>
             </tr><tr>
               <td>December 6-10, 2017</td><td>Workshop.</td>
             </tr>
@@ -113,30 +119,15 @@
 
      <div class="row">
         <h2>Submission</h2>
-        <p>We ask you to prepare your software so that it can be executed via a command line call.</p>
+        <p>We ask you to prepare your software so that it can be executed with two arguments for input and output locations via a command line call.</p>
 
         <p>
-        </p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">file </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre><p></p>
-
-        <p>The name of the output file (to be written to the
-        <i>path/to/output/directory</i> folder) must be the same as the name
-        of the input file. There can be more than one <b>-i</b> argument. In that case your
-        software should process each of the runs and produce an output one
-        file for each.</p>
-
-        <p>For example, if your software is called like this:
-
-        </p><p></p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">dataset</span><span class="pun">/</span><span class="pln">profession</span><span class="pun">.</span><span class="pln">test </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">dataset</span><span class="pun">/</span><span class="pln">nationality</span><span class="pun">.</span><span class="pln">test </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> </span><span class="pun">/</span><span class="pln">output</span></pre><p></p>
-
-        <p>It should write files <i>profession.test</i> and
-        <i>nationality.test</i> to the folder <i>/output</i>, and the
-        two files should be identical to the two input files, except that they
-        contain an additional column with the scores (from the integer range 0..7).</p>
+        </p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">directory </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre><p></p>
 
         <p>You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. We will ask you to deploy your software onto a virtual machine that will be made accessible to you after registration. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
         <p><a class="btn btn-default" href="virtual-machine-user-guide.pdf">Virtual Machine User Guide »</a></p>
         <p>Once deployed in your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
-        <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the WSDM Cup 2017. We agree not to share your software with a third party or use it for other purposes than the WSDM Cup 2017.</p>
+        <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the Clickbait Challenge. We agree not to share your software with a third party or use it for other purposes than the Clickbait Challenge.</p>
           
       </div>
 

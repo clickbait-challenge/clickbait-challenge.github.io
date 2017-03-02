@@ -3,6 +3,32 @@ body {
   padding-bottom: 30px;
 }
 
+.page-header {
+  background: url('../img/clickbait-logo.svg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top:0;
+  
+}
+
+.page-header h1 {
+  padding-top: 50px;
+  padding-bottom: 250px;
+  padding-left: 50px;
+  color:rgb(245,245,245);
+}
+
+pre { font-family: monospace; }
+
+.logo {
+max-width: 300px;
+margin: 10px auto;
+}
+
+.to-appear {
+color:gray;
+}
+
 .theme-dropdown .dropdown-menu {
   position: static;
   display: block;

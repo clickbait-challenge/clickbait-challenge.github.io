@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/clickbait-logo.jpg">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,26 +49,49 @@
 
       <div class="row">
         <div class="page-header">
-           <h1>Clickbait Challenge <small>2017</small></h1>
+           <h1>Clickbait Challenge</h1>
         </div>
       </div>
 
       <div id="task" class="row">
         <div class="col-sm-12">
-          <h2>Task</h2>
+          <h2>The Task</h2>
           <p>
-            Develop a classifier for the detection of clickbait in social media streams. <a href="#">More on clickbait.</a>
+            Develop a classifier for the detection of clickbait in social media streams. <a href="#related-work">More on clickbait.</a>
           </p>
           <p>
-            For each social media post in the datasets, the original post on the social media platform as well as the linked target web page are provided. Example.
+            For each social media post in the <a href="#data">datasets</a>, the post on the social media platform itself as well as the linked target web page are provided. Example.
           </p>
+          <div id="task" class="row">
+            <div class="col-sm-6">
+              <pre><code>
+"post_id": "608999590243741697",
+"post_timestamp": "Thu Jun 11 14:09:51 +0000 2015",
+"post_text": "Some people are such food snobs [[[target-link]]]",
+"post_media": ["608999590243741697.png"],
+
+              </code></pre>
+            </div>
+            <div class="col-sm-6">
+              <pre><code>
+"target_title": "Some people are such food snobs",
+"target_paragraphs": [
+  "What a drag it is, eating kale that isn't ...",
+  "A new study, published this Wednesday by ...", 
+  ...]
+              </code></pre>
+            </div>
+          </div>
           <p>
             Classifiers have to make a binary decision upon clickbait.
           </p>
+          <pre><code>
+"608999590243741697" : 0 or 1 ?
+           </code></pre>
         </div>
 
         <div class="col-sm-12">
-        <h3>How to participate</h3>
+        <h3>How To Participate</h3>
         <ul>
           <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register</a> for the challenge to get a TIRA virtual machine.</li>
           <li>Develop and train a clickbait classifier on the training data.</li> 
@@ -79,25 +103,27 @@
 
         <div class="col-sm-12">
         <h3>Important Dates</h3>
-        <table class="table table-condensed"><tbody>
+        <table class="table"><tbody>
             <tr>
-              <td>March 1, 2017</td><td>Registration opens.</td>
+              <td>March 1, 2017</td><td>Registration begins.</td>
             </tr><tr>
-              <td>May 1, 2017</td><td>Release of Training Dataset 2.</td>
+            <td>July 12, 2017</td><td>Release of validation set.</td>
             </tr><tr>
-              <td>August 1, 2017</td><td>Final software submission.</td>
+              <td>August 1, 2017</td><td>Software evaluation phase starts.</td>
             </tr><tr>
-              <td>August 15, 2017</td><td>Announcement of evaluation results.</td>
+              <td>August 21, 2017</td><td>Software evaluation phase ends.</td>
             </tr><tr>
               <td>September 15, 2017</td><td>Paper submission deadline.</td>
             </tr><tr>
-              <td>December 6-10, 2017</td><td>Workshop.</td>
+              <td>September 30, 2017</td><td>Notification of acceptance.</td>
+            </tr><tr>
+              <td>October 10, 2017</td><td>Camera-ready deadline.</td>
             </tr>
         </tbody></table>
         </div>
 
 
-        <div class="col-sm-12">
+        <div id="related-work" class="col-sm-12">
          <h3>Related Work</h3>
           <ul>
             <li class="inproceedings"><div id="stein_2016b"></div>Martin Potthast, Sebastian Köpsel, Benno Stein, and Matthias Hagen. <a href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2016b.pdf" class="paper"><span class="title">Clickbait Detection</span></a>. In Nicola Ferro et al, editors, <span class="booktitle">Advances in Information Retrieval. 38th European Conference on IR Research (ECIR 16)</span> volume <span class="volume">9626</span> of <span class="series">Lecture Notes in Computer Science</span>, pages <span class="pages">810-817</span>, <span class="address">Berlin Heidelberg New York</span>, <span class="month">March</span> <span class="year">2016</span>. <span class="publisher">Springer</span>.  [<a class="paper" href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2016b.pdf">paper</a>] [<a class="bib" href="http://www.uni-weimar.de/medien/webis/publications/bibentries.php?bibkey=stein_2016b">bib</a>]</li>
@@ -108,50 +134,62 @@
       <hr>
 
       <div id="data" class="row">
-        <h2>Datasets</h2>
-        <ul>
-          <li><a href="https://www.uni-weimar.de/en/media/chairs/webis/corpora/corpus-webis-cbc-16/">Training Dataset 1</a></li>
-          <li>Training Dataset 2 (to appear)</li>
-        </ul>
+        <div class="col-sm-12">
+          <h2>Datasets</h2>
+          <ul>
+            <li><a href="https://www.uni-weimar.de/en/media/chairs/webis/corpora/corpus-webis-cbc-16/">Training Dataset</a></li>
+            <li class="to-appear">Validation Dataset</li>
+          </ul>
+        </div>
       </div>
 
       <hr>
 
      <div class="row">
-        <h2>Submission</h2>
-        <p>We ask you to prepare your software so that it can be executed with two arguments for input and output locations via a command line call.</p>
+        <div class="col-sm-12">
+          <h2>Submission</h2>
+          <p>We ask you to prepare your software so that it can be executed with two arguments for input and output locations via a command line call.</p>
 
-        <p>
-        </p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">directory </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre><p></p>
+          <p>
+          </p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">directory </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre><p></p>
 
-        <p>You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. We will ask you to deploy your software onto a virtual machine that will be made accessible to you after registration. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
-        <p><a class="btn btn-default" href="virtual-machine-user-guide.pdf">Virtual Machine User Guide »</a></p>
-        <p>Once deployed in your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
-        <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the Clickbait Challenge. We agree not to share your software with a third party or use it for other purposes than the Clickbait Challenge.</p>
-          
+          <p>You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. We will ask you to deploy your software onto a virtual machine that will be made accessible to you after registration. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
+          <p><a class="btn btn-default" href="virtual-machine-user-guide.pdf">Virtual Machine User Guide »</a></p>
+          <p>Once deployed in your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
+          <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the Clickbait Challenge. We agree not to share your software with a third party or use it for other purposes than the Clickbait Challenge.</p>
+        </div>
       </div>
 
       <hr>
 
       <div id="evaluation" class="row">
-        <h2>Evaluation Measure</h2>
-        <p>
-          Accuracy.
-        </p>
+        <div class="col-sm-12">
+          <h2>Evaluation Measure</h2>
+          <p>
+            Area under Curve (AUC), Accuracy.
+          </p>
+        </div>
       </div>
-
-
 
     <hr>
 
       <div id="contact" class="row">
-        <h2>Organizers</h2>
-        <ul>
-          <li>Martin Potthast.</li>
-          <li>Matthias Hagen.</li>
-          <li>Tim Gollub.</li>
-          <li>Benno Stein.</li>
-        </ul>
+        <div class="col-sm-12">
+          <h2>Organizers</h2>
+          <ul>
+            <li>Martin Potthast.</li>
+            <li>Matthias Hagen.</li>
+            <li>Tim Gollub.</li>
+            <li>Benno Stein.</li>
+          </ul>
+        </div>
+      </div>
+
+    <hr>
+
+      <div id="logos" class="row">
+         <div class="col-sm-6"><img class="img-responsive logo" src="img/google-digital-news-initiative.png"></div>
+         <div class="col-sm-6"><img class="img-responsive logo" src="img/logo-bauhaus-universitaet-weimar.png"></div>
       </div>
 
     </div><!-- /.container -->

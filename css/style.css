@@ -3,6 +3,10 @@ body {
   padding-bottom: 30px;
 }
 
+h3 {
+  margin-top: 40px;
+}
+
 .page-header {
   background: url('../img/clickbait-logo.svg') no-repeat;
   background-size: cover;
@@ -20,25 +24,39 @@ body {
 
 pre { font-family: monospace; }
 
+#instructions {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 10px;
+}
+ 
+#instructions > li {
+   counter-increment: item;
+   margin-bottom: 10px;
+   vertical-align: center;
+}
+
+#instructions > li:before {
+   margin-right: 10px;
+   font-size:2em;
+   content: counter(item) ".";
+   /*background: lightblue;*/
+   border-radius: 100%;
+   /*color: white;*/
+   /*width: 1.2em;*/
+   text-align: center;
+   display: inline-block;
+}
+
+#related-work > ul > li {
+  margin-bottom: 10px;
+}
+
 .logo {
 max-width: 300px;
 margin: 10px auto;
 }
 
-.to-appear {
-color:gray;
-}
-
-.theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.theme-showcase > p > .btn {
-  margin: 5px 0;
-}
-
-.theme-showcase .navbar .container {
-  width: auto;
+.table > tbody > tr > td{
+  border-top: none;
 }

@@ -48,7 +48,7 @@ ol > li:before {
     text-align: right;
 }​
 
-#related-work > ul > li {
+ul > li {
   margin-bottom: 10px;
 }
 

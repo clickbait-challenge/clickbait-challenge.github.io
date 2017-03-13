@@ -44,7 +44,7 @@ ol > li:before {
    font-size:2em;
 }
 
-.table td:first-child {
+.timetable td:first-child {
     text-align: right;
 }​
 

@@ -38,7 +38,7 @@
             <li class="task"><a href="#task">Task</a></li>
             <li><a href="#data">Data</a></li>
             <li><a href="#data">Submission</a></li>
-            <li><a href="#evaluation">Publication</a></li>
+            <li><a href="#evaluation">Workshop</a></li>
             <li><a href="#contact">Organizers</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -49,18 +49,18 @@
 
       <div class="row">
         <div class="page-header">
-           <h1>Clickbait Challenge</h1>
+           <h1>Clickbait Challenge 2017 <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register »</a></h1>
         </div>
       </div>
 
       <div id="task" class="row">
         <div class="col-sm-12">
-          <h2>The Task</h2>
+          <h2>Task Description</h2>
           <p>
-            Develop a classifier for the detection of clickbait in social media streams. <a href="#related-work">More on clickbait.</a>
+            Develop a classifier for the detection of clickbait posts on social media platforms. <a href="#related-work">More on clickbait.</a>
           </p>
           <p>
-            For each social media post in the <a href="#data">dataset</a>, the post on the social media platform itself as well as the linked target web page are provided as JSON-Object. Example:
+            For each social media post in our <a href="#data">datasets</a>, the content of the post itself as well as the content of the linked target web page are provided as JSON-Object.
           </p>
           <div id="task" class="row">
             <div class="col-sm-6">
@@ -89,8 +89,7 @@
 {"post_id": "608999590243741697", "clickbait_score": 0.7}
            </code></pre>
            <p>
-            For determining the winner, we use ROC-AUC as primary evaluation measure.
-            For informational purposes, we compute further evaluation measures such as PR-AUC and the runtime of the software.
+            Classification performance is measured primarily in terms of ROC-AUC. For informational purposes, we compute further evaluation measures such as PR-AUC and the runtime of the software.
           </p>
           <table class="table table-condensed table-striped rule" style="font-size:small;">
             <thead>
@@ -109,46 +108,72 @@
           </table>
         </div>
 
-        <div class="col-sm-12">
-        <h3>How To Participate</h3>
-        <ol id="instructions">
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register</a> for the challenge to get a TIRA virtual machine.</li>
-          <li>Develop and train a clickbait classifier on the <a href="#data">training data</a>.</li> 
-          <li>Deploy the trained classifier on the TIRA virtual machine assigned to you.</li>
-          <li>Use <a href="tia.io">tira.io</a> to evaluate the deployed classifier on the test set.</li>
-          <li>Submit a notebook paper and present your approach at the workshop.</li>
-        </ol>
+        <div id="instructions" class="col-sm-12">
+          <h3>How To Participate</h3>
+          <ol class="col-sm-6">
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register</a> for the challenge to get a TIRA virtual machine.</li>
+            <li>Develop and train a clickbait classifier on the <a href="#data">training data</a>.</li> 
+            <li><a href="virtual-machine-user-guide.pdf">Deploy</a> the trained classifier on the TIRA virtual machine assigned to you.</li>
+
+          </ol>
+          <ol class="col-sm-6">
+            <li>Use <a href="tia.io">tira.io</a> to self-evaluate the deployed classifier on the test set.</li>
+            <li>Write and <a href="#paper">submit a paper</a> that describes how you approached the task.</li>
+            <li>Pesent your approach at the <a href="#workshop">workshop</a>.</li>
+          </ol>
         </div>
+
 
         <div class="col-sm-12">
         <h3>Important Dates</h3>
+        <div class="col-sm-6">
         <table class="table"><tbody>
             <tr>
-              <td>March 1, 2017</td><td>Registration begins. Release of training dataset.</td>
+              <td>March 15, 2017</td><td>Registration begins.</td>
+             </tr><tr>
+            <td>March 31, 2017</td><td>Release of training dataset.</td>
             </tr><tr>
-            <td>July 12, 2017</td><td>Release of validation dataset.</td>
+            <td>May 15, 2017</td><td>Release of validation dataset.</td>
             </tr><tr>
-              <td>August 1, 2017</td><td>Software evaluation phase starts.</td>
-            </tr><tr>
-              <td>August 21, 2017</td><td>Software evaluation phase ends.</td>
-            </tr><tr>
-              <td>September 15, 2017</td><td>Paper submission deadline.</td>
-            </tr><tr>
-              <td>September 30, 2017</td><td>Notification of acceptance.</td>
-            </tr><tr>
-              <td>October 10, 2017</td><td>Camera-ready deadline.</td>
+              <td>July 1 -- July 21, 2017</td><td>Software evaluation phase.</td>
             </tr>
         </tbody></table>
+        </div>
+        <div class="col-sm-6">
+        <table class="table"><tbody>
+            <tr>
+              <td>July 30, 2017</td><td>Result Notifications.</td>
+            </tr><tr>
+              <td>August 15, 2017</td><td>Paper submission deadline.</td>
+            </tr><tr>
+              <td>August 30, 2017</td><td>Notification of acceptance.</td>
+            </tr><tr>
+              <td>September 10, 2017</td><td>Camera-ready deadline.</td>
+            </tr>
+        </tbody></table>
+        </div>
         </div>
 
 
         <div id="related-work" class="col-sm-12">
           <h3>Related Work</h3>
-          <ul>
-            <li class="inproceedings">Martin Potthast, Sebastian Köpsel, Benno Stein, and Matthias Hagen. <a href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2016b.pdf" class="paper"><span class="title">Clickbait Detection</span></a>. In Advances in Information Retrieval (ECIR 16)</span>, <span class="month">March</span> <span class="year">2016</span>. [<a class="bib" href="http://www.uni-weimar.de/medien/webis/publications/bibentries.php?bibkey=stein_2016b">bib</a>]</li>
-            <li>Wikipedia. <a href="https://en.wikipedia.org/wiki/Clickbait">Clickbait --- Wikipedia, The Free Encyclopedia</a>. 2017.</li>
-            <li>Alex Peysakhovich and Kristin Hendrix. <a href="http://newsroom.fb.com/news/2016/08/news-feed-fyi-further-reducing-clickbait-in-feed/">News Feed FYI: Further Reducing Clickbait in Feed</a>. In Facebook newsroom, August, 2016.</li>
-            <li>Ricardo Bilton. <a href="http://digiday.com/media/many-many-ways-publishers-define-clickbait/">The many different ways publishers define 'clickbait'</a>. In digiday UK, November, 2014.</li>
+          <ul>            
+            <li>
+              <p>Wikipedia. <a href="https://en.wikipedia.org/wiki/Clickbait">Clickbait --- Wikipedia, The Free Encyclopedia</a>. 2017.</p>
+              <blockquote>Clickbait tweets typically aim to exploit the "curiosity gap", providing just enough information to make readers curious, but not enough to satisfy their curiosity without clicking through to the linked content.</blockquote>
+            </li>
+            <li>
+              <p>Alex Peysakhovich and Kristin Hendrix. <a href="http://newsroom.fb.com/news/2016/08/news-feed-fyi-further-reducing-clickbait-in-feed/">News Feed FYI: Further Reducing Clickbait in Feed</a>. In Facebook newsroom, August, 2016.</p>
+              <blockquote> A tweet is Clickbait if (1) the tweet withholds information required to understand what the content of the article is; and if (2) the tweet exaggerates the article to create misleading expectations for the reader.</blockquote>
+            </li>
+            <li>
+              <p>Ricardo Bilton. <a href="http://digiday.com/media/many-many-ways-publishers-define-clickbait/">The many different ways publishers define 'clickbait'</a>. In digiday UK, November, 2014.</p>
+              <blockquote>Clickbait is saying "this town" or "this state" or "this celebrity" instead of saying Los Angeles or Colorado or Justin Timberlake. It's over-promising and under-delivering. It's leaving out the one crucial piece of information the reader may want to know.</blockquote>
+            </li>
+            <li>
+              <p>Martin Potthast, Sebastian Köpsel, Benno Stein, and Matthias Hagen. <a href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2016b.pdf">Clickbait Detection</a>. In Advances in Information Retrieval (ECIR 16), March 2016. [<a class="bib" href="http://www.uni-weimar.de/medien/webis/publications/bibentries.php?bibkey=stein_2016b">bib</a>]</p>
+              <blockquote>This paper presents the first machine learning approach to clickbait detection: the goal is to identify messages in a social stream that are designed to exploit cognitive biases to increase the likelihood of readers clicking an accompanying link.</blockquote>
+            </li>
           </ul>
         </div>
       </div><!--/.row -->
@@ -159,7 +184,7 @@
         <div class="col-sm-12">
           <h2>Datasets</h2>
           <ul>
-            <li><a href="https://www.uni-weimar.de/en/media/chairs/webis/corpora/corpus-webis-cbc-16/">Training Dataset</a></li>
+            <li class="to-appear">Training Dataset</li>
             <li class="to-appear">Validation Dataset</li>
           </ul>
         </div>
@@ -167,42 +192,56 @@
 
       <hr>
 
-     <div class="row">
+     <div id="software" class="row">
         <div class="col-sm-12">
           <h2>Software Submission</h2>
-          <p>We ask you to prepare your software so that it can be executed with two arguments for input and output locations via a command line call.</p>
+          <p>We use the Evaluation as a Service platform <a href="http://www.tira.io">TIRA</a> to evaluate the submitted classifiers. TIRA requires that submitted software can be executed with two arguments for input and output locations via a command line call. E.g., the syntax could be:</p>
 
-          <p>
-          </p><pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">directory </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre><p></p>
+          
+          <pre class="prettyprint lang-c" style="overflow-x:auto"><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> mySoftware </span><b><span class="pun">-</span><span class="pln">i</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">input</span><span class="pun">/</span><span class="pln">directory </span><b><span class="pun">-</span><span class="pln">o</span></b><span class="pln"> path</span><span class="pun">/</span><span class="pln">to</span><span class="pun">/</span><span class="pln">output</span><span class="pun">/</span><span class="pln">directory</span></pre>
 
           <p>You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. We will ask you to deploy your software onto a virtual machine that will be made accessible to you after registration. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
           <p><a class="btn btn-default" href="virtual-machine-user-guide.pdf">Virtual Machine User Guide »</a></p>
-          <p>Once deployed in your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
+          <p>Once deployed on your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
           <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the Clickbait Challenge. We agree not to share your software with a third party or use it for other purposes than the Clickbait Challenge.</p>
         </div>
       </div>
 
       <hr>
 
-      <div id="evaluation" class="row">
+      <div id="paper" class="row">
         <div class="col-sm-12">
           <h2>Paper Submission</h2>
           <p>
-            Paper submissions consist of up to four (4) pages of content. Final versions will be given one additional page so that reviewers’ comments can be taken into account.
+            Detailed paper submission information and paper templates will we provided as soon as the venue for the final workshop has been determined.
           </p>
         </div>
       </div>
+
+      <hr>
+
+      <div id="workshop" class="row">
+        <div class="col-sm-12">
+          <h2>Workshop</h2>
+          <p>
+            TBD.
+          </p>
+        </div>
+      </div>
+
 
     <hr>
 
       <div id="contact" class="row">
         <div class="col-sm-12">
           <h2>Organizers</h2>
-          <ul>
-            <li>Tim Gollub.</li>
-            <li>Martin Potthast.</li>
-            <li>Matthias Hagen.</li>
-            <li>Benno Stein.</li>
+          <ul class="col-sm-6">
+            <li>Tim Gollub, Bauhaus-Universität Weimar.</li>
+            <li>Martin Potthast, Bauhaus-Universität Weimar.</li>
+          </ul>
+          <ul class="col-sm-6">
+            <li>Matthias Hagen, Bauhaus-Universität Weimar.</li>
+            <li>Benno Stein, Bauhaus-Universität Weimar.</li>
           </ul>
         </div>
       </div>

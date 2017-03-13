@@ -24,33 +24,46 @@ h3 {
 
 pre { font-family: monospace; }
 
-#instructions {
-  counter-reset: item;
+ol {
   list-style: none;
   padding-left: 10px;
-}
- 
-#instructions > li {
-   counter-increment: item;
-   margin-bottom: 10px;
-   vertical-align: center;
+  margin-bottom: 0px;
 }
 
-#instructions > li:before {
+#instructions {
+  counter-reset: mycounter;
+}
+
+ol > li {
+  counter-increment: mycounter;
+}
+
+ol > li:before {    
+   content: counter(mycounter) ".";
    margin-right: 10px;
    font-size:2em;
-   content: counter(item) ".";
-   /*background: lightblue;*/
-   border-radius: 100%;
-   /*color: white;*/
-   /*width: 1.2em;*/
-   text-align: center;
-   display: inline-block;
 }
+
+.table td:first-child {
+    text-align: right;
+}​
 
 #related-work > ul > li {
   margin-bottom: 10px;
 }
+
+blockquote {background: #f9f9f9; font-size:16px;}
+blockquote:before {
+  quotes:"\201C""\2018";
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.to-appear { color:gray; }
 
 .logo {
 max-width: 300px;

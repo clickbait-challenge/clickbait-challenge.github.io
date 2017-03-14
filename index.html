@@ -49,7 +49,7 @@
 
       <div class="row">
         <div class="page-header">
-           <h1>Clickbait Challenge 2017 <a class="btn btn-default" href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register »</a></h1>
+           <h1>Clickbait Challenge 2017 <a class="btn btn-default" href="https://goo.gl/7owo61">Register »</a></h1>
         </div>
       </div>
 
@@ -62,7 +62,7 @@
           <p>
             For each social media post in our <a href="#data">datasets</a>, the content of the post itself as well as the content of the linked target web page are provided as JSON-Object.
           </p>
-          <div id="task" class="row">
+          <div class="row">
             <div class="col-sm-6">
               <pre><code>              
 {"post_id": "608999590243741697",
@@ -87,22 +87,55 @@
           </p>
           <pre><code>
 {"post_id": "608999590243741697", "clickbait_score": 0.7}
-           </code></pre>
-           <p>
-            Classification performance is measured primarily in terms of ROC-AUC. For informational purposes, we compute further evaluation measures such as PR-AUC and the runtime of the software.
+          </code></pre>
+          <p>
+            Classification performance is measured against a crowd-sourced test set. Every post in the test set was annotated on a 4-point scale [1, 0.75, 0.25, 0] by at least 3 annotators.
           </p>
-          <table class="table table-condensed table-striped rule" style="font-size:small;">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="box_tweet">
+                  <p style="font-size: 24px">Some people are such food snobs <a href="http://wapo.st/1IJi2iv">target_link</a></p>
+              </div>
+              <div class="row">
+                  <div class="col-xs-3">
+                      <div class="radio"><label><input name="score" type="radio" value="1"> clickbait</label></div>
+                  </div>
+                  <div class="col-xs-3">
+                      <div class="radio"><label><input name="score" type="radio" value="0.75" checked> probably clickbait</label></div>
+                  </div>
+                  <div class="col-xs-3">
+                      <div class="radio"><label><input name="score" type="radio" value="0.25"> probably okay</label></div>
+                  </div>
+                  <div class="col-xs-3">
+                      <div class="radio"><label><input name="score" type="radio" value="0"> okay</label></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <pre><code>
+  {"post_id": "608999590243741697", 
+   "annotations": [1, 0.75, 0.75],
+   "avg_clickbait_score": 0.833,
+   "majority_class": "clickbait"}
+              </code></pre>
+            </div>
+
+          </div>
+          <p>
+            As primary evaluation metric Mean Squared Error (MSE) with respect to the average clickbait score of the annotators is used. For informational purposes, we compute further evaluation measures such as Median Absolute Error (MedAE) or the Receiver Operating Characteristic (ROC), as well as the runtime of the software.
+          </p>
+          <table class="table table-condensed table-striped">
             <thead>
-              <tr class="mid">
-                <th class="sort-desc">ROC-AUC</th><th>PR-AUC</th><th>ACC</th><th>F</th><th>Runtime</th><th>Team</th>
+              <tr>
+                <th>MSE</th><th>MedAE</th><th>ROC</th><th>ACC</th><th>F</th><th>Runtime</th><th>Team</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>0.947</strong></td><td>0.457</td><td>0.999</td><td>0.380</td><td>17:11:16</td><td><strong>Team 1</strong></td>
+                <td><strong>0.124</strong></td><td>0.174</td><td>0.457</td><td>0.999</td><td>0.380</td><td>17:11:16</td><td><strong>Team 1</strong></td>
               </tr>
               <tr>
-                <td><strong>0.937</strong></td><td>0.352</td><td>0.999</td><td>0.173</td><td>02:47:50</td><td><strong>Team 2</strong></td>
+                <td><strong>0.152</strong></td><td>0.201</td><td>0.352</td><td>0.999</td><td>0.173</td><td>02:47:50</td><td><strong>Team 2</strong></td>
               </tr>
             </tbody>
           </table>
@@ -111,7 +144,7 @@
         <div id="instructions" class="col-sm-12">
           <h3>How To Participate</h3>
           <ol class="col-sm-6">
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScXqljH1op5RkFA_UjKshQJhzrJG1zahH4ix_w5E7d-vDRnuw/viewform">Register</a> for the challenge to get a TIRA virtual machine.</li>
+            <li><a href="https://goo.gl/7owo61">Register</a> for the challenge to get a TIRA virtual machine.</li>
             <li>Develop and train a clickbait classifier on the <a href="#data">training data</a>.</li> 
             <li><a href="virtual-machine-user-guide.pdf">Deploy</a> the trained classifier on the TIRA virtual machine assigned to you.</li>
 
@@ -183,12 +216,26 @@
       <div class="row">
         <div class="col-sm-12">
           <h2>Datasets</h2>
-          <ul>
-            <li class="to-appear">Unlabeled Data.</li>
-            <li class="to-appear">Training Dataset.</li>
-            <li class="to-appear">Validation Dataset.</li>
-          </ul>
-        </div>
+          <p> Over the course of the shared task, three datasets are provided for developing the classifier. </p>
+          <table class="table table-condensed table-striped">
+            <thead>
+              <tr>
+                <th>Dataset</th><th>#posts</th><th>Posts &amp; Targets</th><th>Media Files</th><th>Truth</th><th>Release Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="to-appear">Training</td><td>~2500</td><td></td><td></td><td></td><td>March 31, 2017</td>
+              </tr>
+              <tr>
+                <td class="to-appear">Unlabeled</td><td>~15000</td><td></td><td></td><td class="to-appear"> --- </td><td>March 31, 2017</td>
+              </tr>
+             <tr>
+                <td class="to-appear">Validation</td><td>~15000</td><td></td><td></td><td></td><td>May 15, 2017</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>        
       </div>
 
       <hr id="software">

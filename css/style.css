@@ -24,6 +24,13 @@ h3 {
 
 pre { font-family: monospace; }
 
+.box_tweet {
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 25px 30px;
+
+}
+
 ol {
   list-style: none;
   padding-left: 10px;

@@ -22,7 +22,7 @@ h3 {
   color:rgb(245,245,245);
 }
 
-pre { font-family: monospace; }
+pre { font-family: monospace; margin-bottom: 25px;}
 
 .box_tweet {
     border: 1px solid #ddd;

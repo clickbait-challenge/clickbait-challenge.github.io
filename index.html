@@ -58,8 +58,7 @@
           <h2>Task Description</h2>
           <p>
             Develop a classifier for the detection of clickbait posts on social media platforms. <a href="#related-work">More on clickbait.</a>
-          </p>
-          <p>
+          <br>
             For each social media post in our <a href="#data">datasets</a>, the content of the post itself as well as the main content of the linked target web page are provided as JSON-Object.
           </p>
           <div class="row">
@@ -104,9 +103,9 @@
           </p>
           <div class="row">
             <div class="col-sm-6">
-              <div style="text-align:center; font-size: 16px; padding-bottom: 5px;"> How click baiting is the following post?</div>
+              <div style="text-align:center; font-size: 16px; padding-bottom: 10px;"> How click baiting is the following post?</div>
               <div class="box_tweet">
-                  <p style="font-size: 24px">Some people are such food snobs <a href="http://wapo.st/1IJi2iv">targetLink</a></p>
+                  <span style="font-size: 24px">Some people are such food snobs <a href="http://wapo.st/1IJi2iv">targetLink</a></span>
               </div>
               <div class="row">
                   <div class="col-xs-3">
@@ -122,6 +121,7 @@
                       <div class="radio"><label><input name="score" type="radio">heavily click baiting (1.0)</label></div>
                   </div>
               </div>
+              <span class="code-caption">crowd sourcing task design</span>
             </div>
             <div class="col-sm-6">
               <pre><code>

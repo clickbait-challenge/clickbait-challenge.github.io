@@ -60,11 +60,11 @@
             Develop a classifier for the detection of clickbait posts on social media platforms. <a href="#related-work">More on clickbait.</a>
           </p>
           <p>
-            For each social media post in our <a href="#data">datasets</a>, the content of the post itself as well as the content of the linked target web page are provided as JSON-Object.
+            For each social media post in our <a href="#data">datasets</a>, the content of the post itself as well as the main content of the linked target web page are provided as JSON-Object.
           </p>
           <div class="row">
             <div class="col-sm-6">
-              <pre><code>              
+              <pre><code>           
 {
  "id": "608999590243741697",
  "postTimestamp": "Thu Jun 11 14:09:51 +0000 2015",
@@ -72,6 +72,7 @@
  "postMedia": ["608999590243741697.png"]
 }
               </code></pre>
+              <span class="code-caption">post.json</span>
             </div>
             <div class="col-sm-6">
               <pre><code>
@@ -85,16 +86,20 @@
    "A new study, published this Wednesday by ...", 
    ...],
  "targetCaptions": ["(Flikr/USDA)"]
- }</code></pre>
+ }            </code></pre>
+              <span class="code-caption">target.json</span>
             </div>
           </div>
           <p>
-            Classifiers have to output a clickbait score in the range [0,1], where a value of 1 denotes that a post is heavily click baiting.
+            Classifiers have to output a clickbait score in the range [0,1], where a value of 1.0 denotes that a post is heavily click baiting.
           </p>
+          <div>
           <pre><code>
-{"id": "608999590243741697", "clickbaitScore": 0.7}
+{"id": "608999590243741697", "clickbaitScore": 1.0}
           </code></pre>
-          <p>
+          <span class="code-caption">prediction.json</span>
+          </div>
+          <p style="clear:both;">
             Performance is measured against a crowd-sourced test set. Every post in the training and test sets has been assessed on a 4-point scale [0, 0.3, 0.66, 1] by 10 annotators.
           </p>
           <div class="row">
@@ -125,6 +130,7 @@
    "avgClickbaitScore": 0.773,
    "majorClass": "clickbait"}
               </code></pre>
+              <span class="code-caption">truth.json</span>
             </div>
 
           </div>
@@ -237,7 +243,7 @@
                 <!--<td class="to-appear">Training</td><td>~2500</td><td><a href="clickbait17-training-posts-170323.json">training-posts-170323.json</a></td><td><a href="clickbait17-training-media-170323.zip">training-media-170323.zip</a></td><td><a href="clickbait17-training-targets-170323.json">training-targets-170323.json</a></td><td><a href="clickbait17-training-truth-170323.json">training-truth-170323.json</a></td><td>March 31, 2017</td>
               </tr>-->
               <tr>
-                <td class="to-appear">Training</td><td>~2730</td><td></td><td></td><td></td><td></td><td>March 31, 2017</td>
+                <td class="to-appear">Training</td><td>2730</td><td></td><td></td><td></td><td></td><td>March 31, 2017</td>
               </tr>
               <tr>
                 <td class="to-appear">Unlabeled</td><td>~15000</td><td></td><td></td><td></td><td class="to-appear"> --- </td><td>April 31, 2017</td>

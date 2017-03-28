@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="75px" height="46px" viewBox="0 0 75 46" enable-background="new 0 0 75 46" xml:space="preserve">
-<polyline fill="none" stroke="#000000" stroke-width="1.25" points="19.664,0.625 54.814,26.255 35.042,44.563 "/>
-<polyline fill="#F90012" stroke="#000000" stroke-width="1.25" points="48.159,0.625 55.547,7.049 62.291,0.625 "/>
-<polygon fill="#437BF9" stroke="#000000" stroke-width="1.25" points="35.042,44.563 35.042,44.563 54.814,26.255 19.664,0.625 
-	0.625,0.625 0.625,22.594 5.202,26.255 0.625,29.916 0.625,44.563 "/>
-<polyline fill="#00B254" stroke="#000000" stroke-width="1.25" points="0.625,29.916 16.042,19.896 26.319,26.255 16.042,32.742 
-	0.625,22.594 "/>
-<polygon fill="#FFBB00" stroke="#000000" stroke-width="1.25" points="62.291,0.625 73.854,0.625 73.854,44.563 35.042,44.563 
-	54.814,26.255 19.664,0.625 48.159,0.625 55.547,7.415 "/>
+<svg version="1.1" id="wide-thick" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="610.363px" height="186.583px" viewBox="0 0 610.363 186.583" enable-background="new 0 0 610.363 186.583"
+	 xml:space="preserve">
+<g>
+	<polygon fill="#437BF9" stroke="#000000" stroke-width="8" points="4,149.983 4,182.583 381.009,182.583 447.623,120.221 290.3,4 
+		4,4 4,89.038 50.359,119.771 	"/>
+	<polygon fill="#FFBB00" stroke="#000000" stroke-width="8" points="521.324,4 491.56,32.347 461.796,4 290.3,4 447.623,120.221 
+		381.009,182.583 606.363,182.583 606.363,4 	"/>
+	<polyline fill="#00B254" stroke="#000000" stroke-width="8" points="4,149.983 50.359,119.771 130.142,172.662 215.182,120.22 
+		130.142,67.778 50.359,119.771 4,89.038 	"/>
+	<polyline fill="#F90012" stroke="#000000" stroke-width="8" points="461.796,4 492.978,32.347 521.324,4 	"/>
+</g>
 </svg>

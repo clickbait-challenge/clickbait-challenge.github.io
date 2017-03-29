@@ -99,7 +99,7 @@
           <span class="code-caption">results.json</span>
           </div>
           <p style="clear:both;">
-            Performance is measured against a crowd-sourced test set. Every post in the training and test sets have been assessed on a 4-point scale [0, 0.3, 0.66, 1] by 10 annotators.
+            Performance is measured against a crowd-sourced test set. The posts in the training and test sets have been judged on a 4-point scale [0, 0.3, 0.66, 1] by 10 annotators.
           </p>
           <div class="row">
             <div class="col-sm-6">
@@ -136,7 +136,7 @@
 
           </div>
           <p>
-            As primary evaluation metric Mean Squared Error (MSE) with respect to the mean judgments of the annotators is used. For informational purposes, we compute further evaluation measures such as Median Absolute Error (MedAE) or the Receiver Operating Characteristic (ROC) with respect to the mode of the judgments, as well as the runtime of the software.
+            As primary evaluation metric Mean Squared Error (MSE) with respect to the mean judgments of the annotators is used. For informational purposes, we compute further evaluation measures such as Median Absolute Error (MedAE) or the Receiver Operating Characteristic (ROC) with respect to the mode of the judgments, as well as the runtime of the classification software.
           </p>
           <table class="table table-condensed table-striped">
             <thead>
@@ -232,7 +232,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h2>Datasets</h2>
-          <p> Over the course of the shared task, three datasets are going to be released. Each dataset consists of up to four files. Except the media archive, which is a zip file containing the images referenced in the posts, all files are valid JSON-Arrays. Each Object in the JSON-Array provides specific information about a specific post. The posts-file contains information about the post itself, the targets file contains information about the main content of the article advertised in the post. The truth file contains the crowd-sourced clickbait scores. Have a look at the <a href="clickbait17-dataset-schema.json">dataset schema file</a> that lists all the available fields for a post.</p>
+          <p> Over the course of the shared task, three datasets are going to be released. Each dataset consists of up to four files. Except the media archive, which is a zip file containing the images referenced in the posts, all files are valid JSON-Arrays. Each Object in the JSON-Array provides specific information about a specific post. The <i>posts file</i> contains information about the post itself, the <i>targets file</i> contains information about the main content of the article advertised in the post. The <i>truth file</i> contains the crowd-sourced clickbait scores. Have a look at the <a href="clickbait17-dataset-schema.json">dataset schema file</a> to get an overview of all the available fields for a post.</p>
           <table class="table table-condensed table-striped">
             <thead>
               <tr>
@@ -262,13 +262,13 @@
      <div class="row">
         <div class="col-sm-12">
           <h2>Software Submission</h2>
-          <p>We use the Evaluation as a Service platform <a href="http://www.tira.io">TIRA</a> to evaluate the performance of your classifier. TIRA requires that your classifier can be executed with two arguments for input and output directories via a command line call. The E.g., the syntax could be:</p>
+          <p>We use the Evaluation as a Service platform <a href="http://www.tira.io">TIRA</a> to evaluate the performance of your classifier. TIRA requires that you deploy your classifier as a program that can be executed with two arguments for input and output directories via a command line call. E.g., the syntax could be:</p>
 
           
           <pre> &gt; myClassifier <b>-i</b> path/to/input/directory <b>-o</b> path/to/output/directory</pre>
           <span class="code-caption">example command line call for tira.io</span>
 
-          <p> At runtime, the input directory contains the dataset (i.e. posts and targets files plus media archive) your classifier has to process. The predictions of your classifier should be written into file called <code>results.json</code> into the given output directory. The <code>results.json</code> file should contain a valid JSON-Array, and each element of the array should be an Object holding the id and clickbait-score of a post (cf. the <a href="clickbait17-dataset-schema.json">dataset schema file</a>).</p>
+          <p> At runtime, the input directory contains the dataset (i.e. posts and targets files plus media archive) your classifier has to process. The predictions of your classifier should be written into file called <code>results.json</code> into the given output directory. The <code>results.json</code> file should contain a valid JSON-Array, and each element of the array should be an Object holding the <i>id</i> and the predicted <i>clickbaitScore</i> of a post (cf. the <a href="clickbait17-dataset-schema.json">dataset schema file</a>).</p>
 
           <div>
 <pre><code>[
@@ -279,7 +279,7 @@
           <span class="code-caption">results.json</span>
           </div>
 
-          <p>We will ask you to deploy your software onto a virtual machine that will be made accessible to you after registration. You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
+          <p>We will ask you to deploy your classifier onto a virtual machine that will be made accessible to you after registration. You can choose freely among the available programming languages and among the operating systems Microsoft Windows and Ubuntu. You will be able to reach the virtual machine via ssh and via remote desktop. More information about how to access the virtual machines can be found in the user guide below:</p>
           <p><a class="btn btn-default" href="virtual-machine-user-guide.pdf">Virtual Machine User Guide »</a></p>
           <p>Once deployed on your virtual machine, we ask you to access TIRA at <a href="http://www.tira.io">www.tira.io</a>, where you can self-evaluate your software on the test data.</p>
           <p><strong>Note:</strong> By submitting your software you retain full copyrights. You agree to grant us usage rights only for the purpose of the Clickbait Challenge. We agree not to share your software with a third party or use it for other purposes than the Clickbait Challenge.</p>

@@ -1,0 +1,58 @@
+Subject: Clickbait Detection Shared Task 2017 -- 1st Call for Participation
+
+--
+[Apologies if you receive multiple copies]
+
+
+================================================
+Clickbait Detection Shared Task
+https://clickbait-challenge.github.io
+================================================
+
+
+** Call for participation **
+
+
+Introduction
+-------------------
+We invite you to participate in our shared task on the detection of clickbait posts in social media. The term "clickbait" refers to social media posts designed to entice its readers into clicking an accompanying link at the expense of being informative and objective:
+
+ * A Man Falls Down And Cries For Help Twice. The Second Time, My Jaw Drops <Link>.
+ * 9 Out Of 10 Americans Are Completely Wrong About This Mind-Blowing Fact <Link>.
+ * Here’s What Actually Reduces Gun Violence <Link>.
+
+Clickbait detection plays a vital part in the current discourse about the boon and bane of social media, as clickbait is a major vehicle for phenomenons such as echo chambers, social bots, and fake news.
+
+
+Objective
+-------------------
+The research objective of the shared task is to foster the development of detection technology for linguistically complex phenomena, such as clickbait in social media. While social media providers typically rely, for the detection of clickbait, on context features such as users' clicking behavior, we set the focus on clickbait detection carried out with the more general means of a content analysis based on natural language processing and image analysis. For each social media post in our datasets, we hence provide the text and images of the post as well as the main content of the advertised article.
+
+
+How To Participate
+-------------------
+1. Register for the Clickbait Challenge at https://clickbait-challenge.github.io.
+2. Develop and train a clickbait classifier on our clickbait datasets.
+3. Deploy the trained classifier on a virtual machine we assign to you.
+4. Use tira.io to self-evaluate the deployed classifier on the test set.
+5. Tell us about your approach in a paper.
+6. Attend the workshop hosted at a Google campus in Germany.
+
+
+Important Dates
+-------------------
+Registration opens: March 31, 2017.
+Evaluation period: July 10 -- July 31, 2017.
+Paper submission: August 31, 2017.
+Workshop: TBD.
+
+
+Organizers
+-------------------
+Tim Gollub, Bauhaus-Universität Weimar.
+Martin Potthast, Bauhaus-Universität Weimar.
+Matthias Hagen, Bauhaus-Universität Weimar.
+Benno Stein, Bauhaus-Universität Weimar.
+
+
+

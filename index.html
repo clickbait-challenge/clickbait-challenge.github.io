@@ -237,7 +237,7 @@
           <h2>Datasets</h2>
           <p> Over the course of the competition, three datasets are going to be released. Each dataset is provided as a zip archive with the naming pattern <code>clickbait17-&lt;dataset&gt;-&lt;version&gt;.zip</code>. It contains the following resources (the unlabeled dataset lacks the truth file):</p>
           <ul>
-          <li> <code>instances.jsonl</code>: A line delimited JSON file. Each line is a JSON-Object containing the information we extracted for a specific post and its target article. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
+          <li> <code>instances.jsonl</code>: A line delimited JSON file (<a href="http://jsonlines.org/">JSON Lines</a>). Each line is a JSON-Object containing the information we extracted for a specific post and its target article. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
           <li> <code>truth.jsonl</code>: A line delimited JSON file. Each line is a JSON-Object containing the crowdsourced clickbait judgements of a specific post. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
           <li> <code>media/</code>: A folder that contains all the images referenced in the <code>instances.jsonl</code> file.
           </ul>
@@ -284,11 +284,11 @@
           <p> At runtime, the input directory contains the unzipped dataset (i.e. instances.jsonl and media folder) your classifier has to process. The predictions of your classifier should be written into file called <code>results.jsonl</code> into the given output directory. The <code>results.jsonl</code> file should contain a valid JSON-Object in each line that contains the <i>id</i> and the predicted <i>clickbaitScore</i> for a post (cf. the <a href="clickbait17-dataset-schema.txt">dataset schema file</a>).</p>
 
           <div>
-<pre><code>[
-{"id": "608999590243741697", "clickbaitScore": 1.0},
-{"id": "609408598704128000", "clickbaitScore": 0.25},
+<pre><code>
+{"id": "608999590243741697", "clickbaitScore": 1.0}
+{"id": "609408598704128000", "clickbaitScore": 0.25}
 ...
-]</code></pre>
+</code></pre>
           <span class="code-caption">results.jsonl</span>
           </div>
 

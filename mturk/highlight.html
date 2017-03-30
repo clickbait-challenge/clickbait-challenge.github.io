@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <style>
+        .box_tweet {
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            padding: 30px 40px;
+
+        }
+        .box_examples {
+            margin-bottom: 10px;
+            padding: 4px 4px;
+        }
+        .clickbait_strong { background-color: #FF2300; }
+        .clickbait_medium { background-color: #FF9E00; }
+        .clickbait_weak { background-color: #D4FF00; }
+        .clickbait_none { background-color: #58FF00; }
+        .alert { padding: 5px }
+        .form_rating .radio {
+            text-align: center;
+        }
+
+        .box_tweet p {
+            -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+            -moz-user-select: none; /* mozilla browsers */
+            -khtml-user-select: none; /* webkit (konqueror) browsers */
+            -ms-user-select: none; /* IE10+ */
+        }
+        .link_examples {
+          color: blue;
+        }
+
+        blockquote {background: #f9f9f9; font-size:16px;}
+        blockquote:before {
+          quotes:"\201C""\2018";
+          color: #ccc;
+          content: open-quote;
+          font-size: 4em;
+          line-height: 0.1em;
+          margin-right: 0.25em;
+          vertical-align: -0.4em;
+        }
+        h3 {text-align:center; margin-top:25px;}
+        p {font-size:16px; margin: 5px 5px;}
+
+        span.selected { background-color:   #D3D3D3; }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+
+    <h2 style="text-align:center;">Identify Clickbait Tweets</h2>
+
+
+    <div class="row">
+      <h3>Clickbait Definitions</h3>
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+           <blockquote>Clickbait tweets typically aim to exploit the "curiosity gap", providing just enough information to make readers curious, but not enough to satisfy their curiosity without clicking through to the linked content. (cf. <a href="https://en.wikipedia.org/wiki/Clickbait"  target="_blank">Wikipedia</a>)</blockquote>
+
+          <blockquote> A tweet is Clickbait if (1) the tweet withholds information required to understand what the content of the article is; and if (2) the tweet exaggerates the article to create misleading expectations for the reader. (cf. <a href="http://newsroom.fb.com/news/2016/08/news-feed-fyi-further-reducing-clickbait-in-feed/" target="_blank">Facebook</a>)</blockquote>
+
+           <blockquote>Clickbait is saying "this town" or "this state" or "this celebrity" instead of saying Los Angeles or Colorado or Justin Timberlake. It's over-promising and under-delivering. It's leaving out the one crucial piece of information the reader may want to know. (cf. <a href="http://digiday.com/publishers/many-many-ways-publishers-define-clickbait/" target="_blank">HuffPoSpoilers</a>)</blockquote>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>Examples</h3>
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+        <div class="row">
+          <div class="col-sm-6 text-center text-danger">
+            <b>Clickbait</b>
+          </div>
+          <div class="col-sm-6 text-center text-success">
+            <b>Okay</b>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="box_tweet box_examples">
+                <p><span class="selected">You'll never believe</span> who tripped and fell on the Red Carpet... <span class="link_examples">Link</span></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="box_tweet box_examples">
+                <p><span class="selected">Camera Man tripped and fell while filming</span> on the Red Carpet <span class="selected">at the Oscars</span> <span class="link_examples">Link</span></p>
+            </div>
+        </div>
+        <div class="row">
+          </div>
+          <div class="col-sm-6">
+            <div class="box_tweet box_examples">
+                <p>When <span class="selected">she</span> Looked under her couch cushions and saw <span class="selected">this... I was shocked!</span> <span class="link_examples">Link</span></p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="box_tweet box_examples">
+                <p><span class="selected">Australian finds one of the biggest known example of a 'Giant Huntsman Spider' at home</span> <span class="link_examples">Link</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3 class="text-danger">Important Notes</h3>
+      <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+      <ul>
+        <li><b>Don't confuse clickbait with irrelevance!</b> Just because you're not interested or it's gossip doesn't mean it's clickbait.</li>
+        <li><b>Pay attention to the images!</b> They might spoil information the headlines miss and turn clickbait tweets into tweets that are okay.</li>
+        <li>After you selected a rating <b>highlight the words which hint at the tweet being or not being clickbait</b>, as shown in the examples, by clicking on the respective words.</li>
+        <img src="explain-2.gif" alt=""></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+        <h3>Start working here</h3>
+        <div id="wrapper_tasks" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12">
+            <script>
+                glob_dict_timestamps = {
+                    'start': new Date().getTime(),
+                    'tweets': {}
+                }
+                glob_dict_highlight_timestamps = {
+                    'start': new Date().getTime(),
+                    'tweets': {}
+                }
+                function preprocess_text(text)
+                {
+                  // return text
+                  let index = text.search('<a href')
+                  let text_without_links = ''
+                  if(index >= 0)
+                  { 
+                    text_without_links = text.substring(0, index)
+                  } else {
+                    text_without_links = text
+                  }
+
+                  let text_splitted = text_without_links.trim().split(/\s+/);
+                  text_new = '';
+                  $(text_splitted).each(function(index, element) {
+                    text_new += '<span>'+element+'</span>'
+                    text_new += ' '
+                  })
+                  text_new += text.substring(index)
+
+                  return text_new.trim()
+                }
+
+                var tweets = [
+/*                    ['12345', 'Lotus just revealed its new Exige Sport 380 — and it""s a ""supercar killer"" <a href="https://t.co/kThexkmJZ2">Link</a> <a href="https://t.co/ERKVpqYDQN">Link</a>', '["http://pbs.twimg.com/media/CHFJJk6XAAADPZJ.jpg"]'],
+                    ['1234345', 'Lotus just revealed its new Exige Sport 380 — and it""s a ""supercar killer"" <a href="https://t.co/kThexkmJZ2">Link</a> <a href="https://t.co/ERKVpqYDQN">Link</a>', '["http://pbs.twimg.com/media/CHFJJk6XAAADPZJ.jpg"]'],*/
+                     ['${tweet0_id}', '${tweet0_text}', '${tweet0_media}'],
+                     ['${tweet1_id}', '${tweet1_text}', '${tweet1_media}'],
+                     ['${tweet2_id}', '${tweet2_text}', '${tweet2_media}'],
+                     ['${tweet3_id}', '${tweet3_text}', '${tweet3_media}'],
+                     ['${tweet4_id}', '${tweet4_text}', '${tweet4_media}'],
+                     ['${tweet5_id}', '${tweet5_text}', '${tweet5_media}'],
+                   // ['tweet6_id}', 'tweet6_text}', 'tweet6_media}'],
+                    // ['tweet7_id}', 'tweet7_text}', 'tweet7_media}'],
+                    // ['tweet8_id}', 'tweet8_text}', 'tweet8_media}'],
+                    // ['tweet9_id}', 'tweet9_text}', 'tweet9_media}'],
+                ]
+
+                for (var i = 0; i < tweets.length; i++) {
+                    var tweet = tweets[i]
+                    glob_dict_timestamps.tweets[tweet[0]] = []
+                    glob_dict_highlight_timestamps.tweets[tweet[0]] = []
+                    str = '<div class="annotation_task" id="annotation_task_'+i+'"> <div class="row"> <div class="col-sm-12"> <div class="box_tweet"> <p style="font-size: 26px" data-value="'+tweet[0]+'">'+preprocess_text(tweet[1])+'</p> <div id="wrapper_images_'+tweet[0]+'" class="row"></div> </div> <div class="row"> <div class="col-sm-3" style="background-color: #e2b7b6"> <div class="radio"> <label> <input type="radio" data-id_tweet="'+tweet[0]+'" class="radio_answer" name="is_clickbait_'+i+'" id="strong_'+i+'" value="1"> clickbait </label> </div> </div> <div class="col-sm-3" style="background-color: #e2b7b6"> <div class="radio"> <label> <input type="radio" data-id_tweet="'+tweet[0]+'" class="radio_answer" name="is_clickbait_'+i+'" id="medium_'+i+'" value="0.6666666666"> probably clickbait </label> </div> </div> <div class="col-sm-3 text-right" style="background-color: #99ccff"> <div class="radio"> <label> <input type="radio" data-id_tweet="'+tweet[0]+'" class="radio_answer" name="is_clickbait_'+i+'" id="weak_'+i+'" value="0.3333333333"> probably okay </label> </div> </div> <div class="col-sm-3 text-right" style="background-color: #99ccff"> <div class="radio"> <label> <input type="radio" data-id_tweet="'+tweet[0]+'" class="radio_answer" name="is_clickbait_'+i+'" id="none_'+i+'" value="0"> okay </label> </div> </div> </div> </div> </div> <input type="hidden" id="highlighted_words_'+i+'" name="highlighted_words_'+i+'"> <div id="alerter_'+i+'" class="alert alert-warning"  data-id_tweet="'+tweet[0]+'">Try to mark the words in the tweet that points at it being clickbait as shown in the examples</div> <div class="selected_var" data-value="000000" style="display:none" > </div> <hr>  </div>'
+                    $('#wrapper_tasks').append(str);
+                    $.each($.parseJSON(tweet[2]), function(index, link) {
+                        $('#wrapper_images_'+tweet[0]).append(
+                            '<div class="col-sm-8 col-sm-offset-2">'+
+                            '<img class="img-responsive center-block" src="'+link+'" alt="pic">'+
+                            '</div>'
+                        )
+                    })
+                }
+            </script>
+            <div class="form-group">
+            <label for="comments">Comment (optional)</label>
+                <textarea id="comments" class="form-control" rows="3" name="comments" placeholder="Please leave a comment if you have any suggestions, questions or remarks"></textarea>
+            </div>
+            <input type="submit" name="submit" value="submit" id="submit_button" class="btn btn-primary" disabled>
+        </div>
+    </div>
+    <input type="hidden" name="id_hit" value="${id_hit}">
+    <input type="hidden" name="timestamps" value="" id="input_timestamps">
+    <input type="hidden" name="highlight_timestamps" value="" id="input_highlight_timestamps">
+</div>
+<script>
+$(document).on('click', '.box_tweet p span', function() {
+  let word = $(this);
+  let id_tweet = word.parent().attr('data-value');
+
+  var count_radio =  word.parent().parent().parent().find( "input:checked" ).length;
+  var selected_count = $('p[data-value="'+id_tweet+'"]').find('span.selected').length;
+  glob_dict_highlight_timestamps.tweets[id_tweet].push(new Date().getTime());
+
+  if(word.hasClass('selected'))
+  {
+    word.removeClass('selected')
+    if (selected_count == 1) {
+      //Reset input hint
+      $('.alert[data-id_tweet="'+id_tweet+'"]').attr('class', 'alert alert-warning');
+            $('.alert[data-id_tweet="'+id_tweet+'"]').attr('data-complete', '0');
+      $('.alert[data-id_tweet="'+id_tweet+'"]').html("Try to mark the words in the tweet that points at it being clickbait as shown in the examples");
+    }
+  } else {
+    word.addClass('selected')
+    word.add('id',  'parent_id')
+    //Change to correct input
+    if (count_radio == 1) { //check for one because state before removal is saved
+      $('.alert[data-id_tweet="'+id_tweet+'"]').attr('class', 'alert alert-success');
+      $('.alert[data-id_tweet="'+id_tweet+'"]').attr('data-complete', '1');
+      $('.alert[data-id_tweet="'+id_tweet+'"]').html("Selections are enough to go on");
+    }
+  }
+  if(validateForm())
+    {
+        $('#submit_button').prop('disabled', false)
+    } else {
+        $('#submit_button').prop('disabled', true)
+    }
+})
+
+$(document).on('click', '#spoiler_button', function() {
+    $('#instructions').show();
+    $(this).text("Hide");
+    $(this).addClass("btn-primary");
+    $(this).removeClass("btn-danger");
+    $(this).width(200);
+    $(this).attr("id","spoiler_open");
+})
+$(document).on('click', '#spoiler_open', function() {
+    $('#instructions').hide();
+    $(this).text("Show Instruction");
+    $(this).attr("id","spoiler_button");
+})
+
+$(document).on('click', '#submit_button', function(e) {
+    // e.preventDefault()
+    if(validateForm())
+    {
+        $('#input_timestamps').val(JSON.stringify(glob_dict_timestamps))
+        $('#input_highlight_timestamps').val(JSON.stringify(glob_dict_timestamps))
+        save_highlighted_words()
+        return true
+    } else {
+        alert('please don\'t cheat!')
+        return false
+    }
+})
+
+$(document).on('change', '.radio_answer', function() {
+    let id_tweet = $(this).data('id_tweet');
+    var selected_count = $('p[data-value="'+id_tweet+'"]').find('span.selected').length;
+
+    if($(this).val() > -1.0) {
+      $('.alert[data-id_tweet="'+id_tweet+'"]').show()
+    } else {
+      $('.alert[data-id_tweet="'+id_tweet+'"]').hide()
+    }
+        //Change to correct input
+    if ( selected_count > 0 ) {
+      $('.alert[data-id_tweet="'+id_tweet+'"]').attr('class', 'alert alert-success');
+      $('.alert[data-id_tweet="'+id_tweet+'"]').html("Selections are enough to go on")
+      $('.alert[data-id_tweet="'+id_tweet+'"]').attr('data-complete', '1');
+      var check_class =    $('.alert[data-id_tweet="'+id_tweet+'"]').attr('class');
+    }
+    var count_checked_inputs = $('input[type="radio"]:checked').length
+
+    if(validateForm())
+    {
+        $('#submit_button').prop('disabled', false)
+    } else {
+        $('#submit_button').prop('disabled', true)
+    }
+
+    glob_dict_timestamps.tweets[id_tweet].push(new Date().getTime())
+})
+
+function validateForm()
+{
+    var completed_attr = $('.alert').map(function(){
+      return $(this).attr('data-complete');
+    }).get();
+    var number_boxes = $('.annotation_task').length;
+    let counter = 0;
+    for (var i = 0; i < completed_attr.length; i++) {
+        if (completed_attr[i] == 1) {
+          counter++;
+        }
+    }
+
+    var count_completed = $('.alert').attr.length
+    var count_checked_inputs = $('input[type="radio"]:checked').length
+    if( (count_checked_inputs == $('.annotation_task').length) && (counter == number_boxes) )
+    {
+        $('#submit_button').prop('disabled', false)
+        return true;
+    } else {
+        $('#submit_button').prop('disabled', true)
+        return false;
+    }
+}
+
+function save_highlighted_words()
+{
+  for (let i = 0; i < tweets.length; i++)
+  {
+    let list_spans = $('#annotation_task_'+i+' .box_tweet p span')
+    let list_result = []
+    $.each(list_spans, function(index, element) {
+      let elem = $(element)
+      list_result.push({'word':elem.text(), 'is_selected': elem.hasClass('selected')})
+    })
+    console.log(JSON.stringify(list_result))
+    let input_highlighted_words = $('#highlighted_words_'+i)
+    input_highlighted_words.val(JSON.stringify(list_result))
+  }
+}
+</script>
+</body>
+</html>

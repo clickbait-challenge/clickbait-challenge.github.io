@@ -86,6 +86,10 @@ blockquote:before {
 
 .to-appear { color:gray; }
 
+#data-table td, #data-table th{
+  text-align: center;
+}
+
 .logo {
 max-width: 300px;
 margin: 10px auto;

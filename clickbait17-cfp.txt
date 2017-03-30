@@ -15,7 +15,7 @@ https://clickbait-challenge.github.io
 
 Introduction
 -------------------
-We invite you to participate in our shared task on the detection of clickbait posts in social media. The term "clickbait" refers to social media posts designed to entice its readers into clicking an accompanying link at the expense of being informative and objective:
+We invite you to participate in our shared task on the detection of clickbait posts in social media. The term "clickbait" refers to social media posts that are, at the expense of being informative and objective, designed to entice its readers into clicking an accompanying link:
 
  * A Man Falls Down And Cries For Help Twice. The Second Time, My Jaw Drops <Link>.
  * 9 Out Of 10 Americans Are Completely Wrong About This Mind-Blowing Fact <Link>.

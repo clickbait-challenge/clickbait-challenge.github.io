@@ -3,8 +3,8 @@
   { 
     "id": "<instance id>",
     "postTimestamp": "<weekday> <month> <day> <hour>:<minute>:<second> <time_offset> <year>",
-    "postText": "<text of the post with links removed>",
-    "postMedia": ["<path to an image in the media archive>"],
+    "postText": ["<text of the post with links removed>"],
+    "postMedia": ["<path to a file in the media archive>"],
     "targetTitle": "<title of target article>",
     "targetDescription": "<description tag of target article>",
     "targetKeywords": "<keywords tag of target article>",

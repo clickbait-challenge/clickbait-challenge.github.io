@@ -98,3 +98,7 @@ margin: 10px auto;
 .table > tbody > tr > td{
   border-top: none;
 }
+
+.deprecated {
+  text-decoration: line-through;
+}

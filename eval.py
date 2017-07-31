@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 '''evaluation program for the clickbait challenge 2017.
 web:
     http://www.clickbait-challenge.org/
@@ -13,6 +14,7 @@ import numpy as np
 
 UNDERLINE = '\033[4m'
 END = '\033[0m'
+
 
 def usage():
     usage = ''' Usage:
@@ -74,27 +76,27 @@ if __name__ == "__main__":
 
     try:
         with open(sys.argv[3], 'w') as output_file:
-            print(UNDERLINE+'\nDataset Stats'+END)
+            print(UNDERLINE + '\nDataset Stats' + END)
             write_result('Size', len(truth), output_file)
-            sum_clickbait = sum(1 for x in classes if x=='clickbait')
+            sum_clickbait = sum(1 for x in classes if x == 'clickbait')
             write_result('#Clickbait', sum_clickbait, output_file)
-            write_result('#No-Clickbait', len(truth)-sum_clickbait, output_file)
+            write_result('#No-Clickbait', len(truth) - sum_clickbait, output_file)
 
-            print(UNDERLINE+'\nRegression scores'+END)
+            print(UNDERLINE + '\nRegression scores' + END)
             for name in regression_measures:
                 write_result(name,
                              regression_measures[name](truth, predictions),
                              output_file)
 
-            print(UNDERLINE+'\nBinary classification scores'+END)
-            classes = [0 if t == 'no-clickbait' else 1 for t in classes]      
-            predictions = [0 if t < 0.5 else 1 for t in predictions]            
+            print(UNDERLINE + '\nBinary classification scores' + END)
+            classes = [0 if t == 'no-clickbait' else 1 for t in classes]
+            predictions = [0 if t < 0.5 else 1 for t in predictions]
             for name in classification_measures:
                 write_result(name,
                              classification_measures[name](classes, predictions),
                              output_file)
 
-            print(UNDERLINE+'\nClassification report'+END)
+            print(UNDERLINE + '\nClassification report' + END)
             print(skm.classification_report(classes, predictions))
 
     except IndexError:

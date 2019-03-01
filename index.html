@@ -52,8 +52,8 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="page-header">
-           <h1>Clickbait Challenge 2017 <a class="btn btn-default" href="https://goo.gl/7owo61">Register »</a></h1>
-           <h4>Workshop this November at Bauhaus-Universität Weimar, Germany.</h4>
+           <h1>Clickbait Challenge <a class="btn btn-default" href="https://goo.gl/7owo61">Register »</a></h1>
+           <h4>Continuous Shared Task</h4>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
       <div id="task" class="row">
         <div class="col-sm-12">
           <h2>Task Description</h2>
-          <p>We invite you to participate in our challenge on the detection of clickbait posts in social media. <i>Clickbait</i> refers to social media posts that are, at the expense of being informative and objective, designed to entice its readers into clicking an accompanying link. <a href="#related-work">More on clickbait.</a>
+          <p>We invite you to participate in our ongoing challenge on the detection of clickbait posts in social media. <i>Clickbait</i> refers to social media posts that are, at the expense of being informative and objective, designed to entice its readers into clicking an accompanying link. <a href="#related-work">More on clickbait.</a>
 
           <br>The task of the challenge is to develop a classifier that rates how click baiting a social media post is. For each social media post, the content of the post itself as well as the main content of the linked target web page are provided as JSON-Objects in our <a href="#data">datasets</a>.
           </p>
@@ -175,7 +175,7 @@
         </div>
 
 
-        <div class="col-sm-12">
+        <!--<div class="col-sm-12">
         <h3 id="dates">Important Dates</h3>
         <div class="col-sm-6">
         <table class="timetable table"><tbody>
@@ -205,7 +205,7 @@
             </tr>
         </tbody></table>
         </div>
-        </div>
+        </div>-->
 
 
         <div id="related-work" class="col-sm-12">
@@ -236,7 +236,7 @@
       <div class="row">
         <div class="col-sm-12">
           <h2>Datasets</h2>
-          <p> Over the course of the competition, three datasets are going to be released. Each dataset is provided as a zip archive with the naming pattern <code>clickbait17-&lt;dataset&gt;-&lt;version&gt;.zip</code>. It contains the following resources (the unlabeled dataset lacks the truth file):</p>
+          <p> We provide three datasets for the competition. Each dataset is provided as a zip archive with the naming pattern <code>clickbait17-&lt;dataset&gt;-&lt;version&gt;.zip</code>. It contains the following resources (the unlabeled dataset lacks the truth file):</p>
           <ul>
           <li> <code>instances.jsonl</code>: A line delimited JSON file (<a href="http://jsonlines.org/">JSON Lines</a>). Each line is a JSON-Object containing the information we extracted for a specific post and its target article. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
           <li> <code>truth.jsonl</code>: A line delimited JSON file. Each line is a JSON-Object containing the crowdsourced clickbait judgements of a specific post. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
@@ -257,9 +257,6 @@
               <td><a href="http://www.uni-weimar.de/medien/webis/corpora/corpus-webis-clickbait-17/clickbait17-train-170331.zip">clickbait16-train-170331.zip</a></td>
               <td>March 31, 2017</td>
             </tr>
-            <!--<tr>
-              <td class="to-appear">Training</td><td>2571</td><td></td><td></td><td></td><td></td><td>March 31, 2017</td>
-            </tr>-->
             <tr>
               <td>Unlabeled</td><td>80012</td>
               <td>?</td>
@@ -317,27 +314,16 @@
         </div>
       </div>
 
-      <!--<hr id="paper">
-
-      <div class="row">
-        <div class="col-sm-12">
-          <h2>Paper Submission</h2>
-          <p>
-            Paper submission information and paper templates will we provided as soon as the organization of the workshop has been finished.
-          </p>
-        </div>
-      </div>-->
-
       <hr id="workshop">
 
       <div class="row">
         <div class="col-sm-12">
           <h2>Workshop</h2>
           <p>
-            The workshop takes place on November 27, 2017 at Bauhaus-Universität Weimar, Germany. 
+            The first workshop on clickbait detection took place on November 27, 2017 at Bauhaus-Universität Weimar, Germany. 
           </p>
           <p class="row"> 
-          <h3>Location</h3>
+          <h4>Location</h4>
           <div class="col-sm-6">
             <div><a href="https://www.uni-weimar.de/de/medien/institute/digital-bauhaus-lab/about/">Digital Bauhaus Lab</a></div>
             <div>Bauhausstr. 9a, 3rd floor</div>
@@ -349,7 +335,7 @@
           </div>              
           </p>
           <p>
-          <h3> Schedule </h3>
+          <h4> Schedule </h4>
             <table class="table table-striped table-condensed">
               <thead><tr><th colspan="2"><span style="display:none">.</span></th></tr></thead>
               <tfoot><tr><td colspan="2"><span style="display:none">.</span></td></tr></tfoot>
@@ -375,7 +361,7 @@
         <div class="col-sm-12">
           <h2>Results</h2>
           <p>
-            The following list presents the performance achieved by the participants. As primary evaluation measure, Mean Squared Error (MSE) with respect to the mean judgments of the annotators is used. For further metrics, see the <a href="http://www.tira.io/task/clickbait-detection/dataset/clickbait17-test-170720/">full result table on tira.io</a>. If provided, paper and code of the submissions are linked in each row.
+            The following list presents the current performances achieved by the participants. As primary evaluation measure, Mean Squared Error (MSE) with respect to the mean judgments of the annotators is used. For further metrics, see the <a href="http://www.tira.io/task/clickbait-detection/dataset/clickbait17-test-170720/">full result table on tira.io</a>. If provided, paper and code of the submissions are linked in each row.
           </p>
           <table class="table table-striped">
             <thead>

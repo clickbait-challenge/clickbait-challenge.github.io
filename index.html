@@ -236,52 +236,12 @@
       <div class="row">
         <div class="col-sm-12">
           <h2>Datasets</h2>
-          <p> We provide three datasets for the competition. Each dataset is provided as a zip archive with the naming pattern <code>clickbait17-&lt;dataset&gt;-&lt;version&gt;.zip</code>. It contains the following resources (the unlabeled dataset lacks the truth file):</p>
+          <p> You can find the datasets for the clickbait challenge by following <a href="https://webis.de/data/webis-clickbait-17">this link</a>. The dataset is provided as a zip archive with the following resources (the unlabeled dataset lacks the truth file):</p>
           <ul>
           <li> <code>instances.jsonl</code>: A line delimited JSON file (<a href="http://jsonlines.org/">JSON Lines</a>). Each line is a JSON-Object containing the information we extracted for a specific post and its target article. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
           <li> <code>truth.jsonl</code>: A line delimited JSON file. Each line is a JSON-Object containing the crowdsourced clickbait judgements of a specific post. Have a look at the <a href="clickbait17-dataset-schema.txt">dataset schema file</a> for an overview of the available fields.</li>
           <li> <code>media/</code>: A folder that contains all the images referenced in the <code>instances.jsonl</code> file.
           </ul>
-
-         <table id="data-table" class="table table-condensed table-striped">
-           <thead>
-             <tr>
-               <th>Dataset</th><th>#posts</th><th>#clickbait</th><th>#no-clickbait</th><th>Download Link</th><th>Release Date</th>
-             </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>Training</td><td>2495</td>
-              <td>762</td>
-              <td>1697</td>
-              <td><a href="https://webis.de/data/webis-clickbait-16.html">clickbait16-train-170331.zip</a></td>
-              <td>March 31, 2017</td>
-            </tr>
-            <tr>
-              <td>Unlabeled</td><td>80012</td>
-              <td>?</td>
-              <td>?</td>
-              <td><a href="https://webis.de/data/webis-clickbait-17.html>clickbait17-unlabeled-170429.zip</a></td>
-              <td>April 30, 2017</td>
-            </tr>
-            <tr>
-              <td class="deprecated">Training / Validation</td>
-              <td class="deprecated">19829</td>
-              <td class="deprecated">9656</td>
-              <td class="deprecated">10173</td>
-              <td class="deprecated"><a href="https://webis.de/data/webis-clickbait-17.html">clickbait17-train-170616.zip</a></td>
-              <td>June 16, 2017</td>
-            </tr>
-            <tr>
-               <td>Training / Validation</td>
-               <td>19538</td>
-               <td>4761</td>
-               <td>14777</td>
-               <td><a href="https://webis.de/data/webis-clickbait-17.html">clickbait17-train-170630.zip</a></td>
-               <td>June 30, 2017</td>
-             </tr>
-           </tbody>
-         </table>
        </div>        
      </div>
 
